@@ -14,7 +14,11 @@ const menu: MenuItem[] = [
   { name: 'Falafel Bowl', price: '$8.50', selected: false },
 ]
 
-function StaffScreen() {
+type StaffScreenProps = {
+  onSelectAdmin?: () => void
+}
+
+function StaffScreen({ onSelectAdmin }: StaffScreenProps) {
   return (
     <div className="staff-screen">
       <div className="staff-container">
@@ -28,7 +32,7 @@ function StaffScreen() {
               <button type="button" className="staff-tab staff-tab--active" aria-current="page">
                 staff
               </button>
-              <button type="button" className="staff-tab">
+              <button type="button" className="staff-tab" onClick={onSelectAdmin}>
                 admin
               </button>
             </div>

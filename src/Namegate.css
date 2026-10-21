@@ -1,0 +1,163 @@
+.namegate-screen {
+  --namegate-bg: #f5f4f2;
+  --namegate-ink: #111110;
+  --namegate-border: 1.095px solid var(--namegate-ink);
+  --namegate-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --namegate-sans: 'DM Sans', system-ui, sans-serif;
+  --namegate-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  display: flex;
+  justify-content: center;
+  min-height: 100svh;
+  background: var(--namegate-bg);
+  color: var(--namegate-ink);
+  font-family: var(--namegate-sans);
+  font-variation-settings: 'opsz' 14;
+  text-align: left;
+}
+
+.namegate-screen p,
+.namegate-screen h1 {
+  margin: 0;
+}
+
+.namegate-screen button,
+.namegate-screen input {
+  font: inherit;
+  color: inherit;
+}
+
+.namegate-screen button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.namegate-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 384px;
+  min-height: 873.77px;
+  box-shadow: var(--namegate-shadow);
+}
+
+/* Nav */
+
+.namegate-nav {
+  border-bottom: var(--namegate-border);
+}
+
+.namegate-nav-inner {
+  /* tab underline sits on top of the nav border */
+  margin-bottom: -1px;
+  padding: 20px 20px 0;
+}
+
+.namegate-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+}
+
+.namegate-brand {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.45px;
+}
+
+.namegate-date {
+  font-family: var(--namegate-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.namegate-tabs {
+  display: flex;
+  padding-top: 16px;
+}
+
+.namegate-screen .namegate-tab {
+  padding: 8px 16px;
+  border-bottom: 1.095px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.namegate-screen .namegate-tab--active {
+  border-bottom-color: var(--namegate-ink);
+}
+
+/* Main */
+
+.namegate-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 20px;
+}
+
+.namegate-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+}
+
+.namegate-intro {
+  padding-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.namegate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.namegate-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.namegate-field-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.namegate-screen .namegate-input {
+  width: 100%;
+  height: 42.156px;
+  padding: 10px 12px;
+  border: var(--namegate-border);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.namegate-screen .namegate-input::placeholder {
+  color: rgba(17, 17, 16, 0.5);
+  opacity: 1;
+}
+
+.namegate-screen .namegate-continue {
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
